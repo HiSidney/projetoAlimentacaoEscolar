@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/home2.css')}}">
+{% endblock %}
+
+{% block title %}
+<title>Home | Projeto Alimentação Escolar SESI</title>
+{% endblock %}
+
+{% block main %}
+<main>
+    <section>
+        <div class="infoTempo">
+            <h1>Plano Semanal 02/09 - 06/09</h1>
+            <h2 class="tempoFinalResponder">Por favor, responder até 1 dia antes!</h2>
+        </div>
+
+        <div class="formAlimentacao">
+            <h3>Clique em cima da refeição que não irá participar.</h3>
+            <div class="divLegendaMarcacao">
+                <ul class="legendaMarcacao">
+                    <li><div><a><div class="cubico" id="cubicoLegendaMarcado"></div>Vou Comer</a></div></li>
+                    <li><div><a><div class="cubico" id="cubicoLegendaDesmarcado"></div>Não Vou Comer</a></div></li>
+                    <li><div><a><div class="cubico" id="cubicoLegendaBloqueado"></div>Bloqueado</a></div></li>
+                </ul>
+            </div>
+
+            <div class="cardapio">
+                <div class="diaSemana">
+                    <h2>Segunda</h2>
+                    <div class="cafeManha cafeMarcado">
+                        <p>Bebida</p>
+                        <p>Pão</p>
+                        <p>Fruta</p>
+                    </div>
+                    <div class="almoco almocoMarcado">
+                        <p>Arroz</p>
+                        <p>Feijão</p>
+                        <p>Carne</p>
+                        <p>Acompanhamento 1</p>
+                        <p>Acompanhamento 2</p>
+                        <p>Salada</p>
+                        <p>Sobremesa</p>
+                    </div>
+                    <div class="cafeTarde cafeBloqueado">
+                        <p>Bebida</p>
+                        <p>Pão</p>
+                        <p>Fruta</p>
+                    </div>
+                    <div class="data">
+                        <p>02/09/2024</p>
+                    </div>
+                </div>
+            
+                <div class="diaSemana">
+                    <h2>Terça</h2>
+                    <div class="cafeManha cafeMarcado">
+                        <p>Bebida</p>
+                        <p>Pão</p>
+                        <p>Fruta</p>
+                    </div>
+                    <div class="almoco almocoMarcado">
+                        <p>Arroz</p>
+                        <p>Feijão</p>
+                        <p>Carne</p>
+                        <p>Acompanhamento 1</p>
+                        <p>Acompanhamento 2</p>
+                        <p>Salada</p>
+                        <p>Sobremesa</p>
+                    </div>
+                    <div class="cafeTarde cafeMarcado">
+                        <p>Bebida</p>
+                        <p>Pão</p>
+                        <p>Fruta</p>
+                    </div>
+                    <div class="data">
+                        <p>02/09/2024</p>
+                    </div>
+                </div>
+            
+                <div class="diaSemana">
+                    <h2>Quarta</h2>
+                    <div class="cafeManha cafeMarcado">
+                        <p>Bebida</p>
+                        <p>Pão</p>
+                        <p>Fruta</p>
+                    </div>
+                    <div class="almoco almocoMarcado">
+                        <p>Arroz</p>
+                        <p>Feijão</p>
+                        <p>Carne</p>
+                        <p>Acompanhamento 1</p>
+                        <p>Acompanhamento 2</p>
+                        <p>Salada</p>
+                        <p>Sobremesa</p>
+                    </div>
+                    <div class="cafeTarde cafeMarcado">
+                        <p>Bebida</p>
+                        <p>Pão</p>
+                        <p>Fruta</p>
+                    </div>
+                    <div class="data">
+                        <p>02/09/2024</p>
+                    </div>
+                </div>
+            
+                <div class="diaSemana">
+                    <h2>Quinta</h2>
+                    <div class="cafeManha cafeMarcado">
+                        <p>Bebida</p>
+                        <p>Pão</p>
+                        <p>Fruta</p>
+                    </div>
+                    <div class="almoco almocoMarcado">
+                        <p>Arroz</p>
+                        <p>Feijão</p>
+                        <p>Carne</p>
+                        <p>Acompanhamento 1</p>
+                        <p>Acompanhamento 2</p>
+                        <p>Salada</p>
+                        <p>Sobremesa</p>
+                    </div>
+                    <div class="cafeTarde cafeMarcado">
+                        <p>Bebida</p>
+                        <p>Pão</p>
+                        <p>Fruta</p>
+                    </div>
+                    <div class="data">
+                        <p>02/09/2024</p>
+                    </div>
+                </div>
+            
+                <div class="diaSemana">
+                    <h2>Sexta</h2>
+                    <div class="cafeManha cafeMarcado">
+                        <p>Bebida</p>
+                        <p>Pão</p>
+                        <p>Fruta</p>
+                    </div>
+                    <div class="almoco almocoMarcado">
+                        <p>Arroz</p>
+                        <p>Feijão</p>
+                        <p>Carne</p>
+                        <p>Acompanhamento 1</p>
+                        <p>Acompanhamento 2</p>
+                        <p>Salada</p>
+                        <p>Sobremesa</p>
+                    </div>
+                    <div class="cafeTarde cafeBloqueado">
+                        <p>Bebida</p>
+                        <p>Pão</p>
+                        <p>Fruta</p>
+                    </div>
+                    <div class="data">
+                        <p>02/09/2024</p>
+                    </div>
+                </div>
+            </div>
+            <button class="salvar" onclick="abrirConfirmacaoRefeicao()">Salvar</button>
+        </div>
+
+        <div class="desperdicio">
+            <h2>Quantidade desperdiçada na semana 00/00</h2>
+            <h3>- 3%</h3>
+            
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block js %}
+<script src="{{url_for('static', filename='js/home2.js')}}"></script>
+{% endblock %}

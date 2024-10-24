@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %} 
+    <title>Projeto Alimentação Escolar SESI</title>
+    {% endblock %}
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/img/logo/favicon.jpg" type="image/png">
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/faa3c30f58.js" crossorigin="anonymous"></script>
+
+    <!-- framework sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- font goole -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/base.css')}}">
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <div class="menuSuperior">
+            <div class="divLogo">
+                <a href="/">
+                    <img src="{{url_for('static', filename='img/logo/Logo_SESI_vermelho.jpg')}}" alt="logo_SESI">
+                </a>
+                <h1>
+<pre>
+Serviço Social
+da Indústria
+</pre>
+                </h1>
+            </div>
+            <div class="divIcons">
+                <a target="_blank" href="https://www.facebook.com/SESIMococa/?locale=pt_BR"><i class="fa-brands fa-facebook-f"></i></a>
+                <a target="_blank" href="https://www.instagram.com/sesisp/"><i class="fa-brands fa-instagram"></i></a>
+                <a id="confirmaRefeicao"><i id="user" class="fa-regular fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+    {% block main %}
+    {% endblock %}
+
+    {% block footer %}
+    <footer>
+        <div  id="footer">
+            <div id="idNos">
+                <img src="{{url_for('static', filename='img/logo/Logo_SESI_vermelho.jpg')}}">
+                <a href="#">email@gmail.com</a>
+                <a href="#">(19)9999-9999</a>
+            </div>
+            <div id="idRedesSociais">
+                <h2>Sigá-nos</h2>
+                <a target="_blank" href="https://www.facebook.com/SESIMococa/?locale=pt_BR"><i class="fa-brands fa-facebook-f"></i></a>
+                <a target="_blank" href="https://www.instagram.com/sesisp/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <p>&copy; SESI. Todos os direitos reservados.</p>
+    </footer>
+    {% endblock %}
+
+    <div class="janela-modal-user" id="janela-modal-user">
+        <div class="modal-user">
+            <nav>
+                <ul>
+                    <li><i id="user" class="fa-regular fa-user"></i></li>
+                    <li><a href="/account">Minha Conta</a></li>
+                    <li><a href="/login" id="sairConta">Sair da Conta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="janela-modal-confirmacaoRefeicao" id="janela-modal-confirmacaoRefeicao">
+        <div class="modal-confirmacaoRefeicao">
+            <h1>Dejesa Confirmar?</h1>
+            <div class="quadrosDaConfirmacao">
+                <div>
+                    <h2>Segunda</h2>
+                    <ul>
+                        <li>Café da Manhã</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Terça</h2>
+                    <ul>
+                        <li>Café da Manhã</li>
+                        <li>Almoço</li>
+                        <li>Café da Tarde</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Quarta</h2>
+                    <ul>
+                        <li>Café da Manhã</li>
+                        <li>Almoço</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Quinta</h2>
+                    <ul>
+                        <li>Café da Manhã</li>
+                        <li>Almoço</li>
+                        <li>Café da Tarde</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Sexta</h2>
+                    <ul>
+                        <li>Café da Manhã</li>
+                        <li>Almoço</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-btns">
+                <button class="cancelar" id="cancelarConfirmacao" onclick="cancelamentoDaConfirmacao()">Cancelar</button>
+                <button class="salvar" id="confirmaRefeicao" onclick="confirmacaoDaConfirmacao()">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{url_for('static', filename='js/base.js')}}"></script>
+    {% block js %}
+    {% endblock %}
+</body>
+</html>

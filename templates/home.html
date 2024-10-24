@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+{% endblock %}
+
+{% block title %}
+<title>Home | Projeto Alimentação Escolar SESI</title>
+{% endblock %}
+
+{% block main %}
+<main>
+    <section>
+        <div class="infoTempo">
+            <h1>Plano Semanal 02/09 - 06/09</h1>
+            <h2 class="tempoFinalResponder">Por favor, responder até 1 dia antes!</h2>
+        </div>
+
+        <div class="formAlimentacao">
+            <h3>Clique em cima da refeição que não irá participar.</h3>
+            <div class="divLegendaMarcacao">
+                <ul class="legendaMarcacao">
+                    <li><div><a><div class="cubico" id="cubicoLegendaMarcado"></div>Vou Comer</a></div></li>
+                    <li><div><a><div class="cubico" id="cubicoLegendaDesmarcado"></div>Não Vou Comer</a></div></li>
+                    <li><div><a><div class="cubico" id="cubicoLegendaBloqueado"></div>Bloqueado</a></div></li>
+                </ul>
+            </div>
+
+            <div class="cardapio">
+
+                <img src="{{url_for('static',filename='/img/cardapio/sidney.jpg')}}" alt="Cardapio"  class="background-image">
+
+                <div class="overlay">
+
+                    <div class="diaSemana">
+                        <div class="cafeManha cafeMarcado" name="segunda" id="segunda-manha">
+                            
+                        </div>
+                        <div class="almoco almocoMarcado" name="segunda" id="segunda-almoco">
+                            
+                        </div>
+                        <div class="cafeTarde cafeBloqueado" name="segunda" id="segunda-tarde">
+                            
+                        </div>
+                    </div>
+                
+                    <div class="diaSemana">
+                        <div class="cafeManha cafeMarcado" name="terca" id="terca-manha">
+                            
+                        </div>
+                        <div class="almoco almocoMarcado" name="terca" id="terca-almoco">
+                            
+                        </div>
+                        <div class="cafeTarde cafeMarcado" name="terca" id="terca-tarde">
+                            
+                        </div>
+                    </div>
+                
+                    <div class="diaSemana">
+                        <div class="cafeManha cafeMarcado" name="quarta" id="quarta-manha">
+                            
+                        </div>
+                        <div class="almoco almocoMarcado" name="quarta" id="quarta-almoco">
+                            
+                        </div>
+                        <div class="cafeTarde cafeMarcado" name="quarta" id="quarta-tarde">
+                            
+                        </div>
+                    </div>
+                
+                    <div class="diaSemana">
+                        <div class="cafeManha cafeMarcado" name="quinta" id="quinta-manha">
+                            
+                        </div>
+                        <div class="almoco almocoMarcado" name="quinta" id="quinta-almoco">
+                            
+                        </div>
+                        <div class="cafeTarde cafeMarcado" name="quinta" id="quinta-tarde">
+                            
+                        </div>
+                    </div>
+                
+                    <div class="diaSemana">
+                        <div class="cafeManha cafeMarcado" name="sexta" id="sexta-manha">
+                            
+                        </div>
+                        <div class="almoco almocoMarcado" name="sexta" id="sexta-almoco">
+                            
+                        </div>
+                        <div class="cafeTarde cafeBloqueado" name="sexta" id="sexta-tarde">
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <button class="salvar" id="abrirConfirmacaoRefeicao">Salvar</button>
+        </div>
+
+        <div class="desperdicio">
+            <h2>Quantidade desperdiçada na semana 00/00</h2>
+            <h3>- 3%</h3>
+            
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block js %}
+<script src="{{url_for('static', filename='js/home.js')}}"></script>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'baseNutricionista.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/regDesperdicio.css')}}">
+{% endblock %}
+
+{% block title %}
+<title>Registro de Desperdício | Projeto Alimentação Escolar SESI</title>
+{% endblock %}
+
+{% block main %}
+<main>
+    <section>
+        <div class="campo">
+            <label for="inputNumDesperdicio">Número de Desperdício (em kilograma): </label>
+            <div class="campo2">
+                <input type="number" name="desperdicioNumver" id="inputNumDesperdicio">
+                <input type="date" name="date" id="date">
+            </div>
+        </div>
+        <input id="btn-wasteConfirm" type="submit" value="Registrar">
+    </section>
+</main>
+{% endblock %}
+
+{% block js %}
+<script src="{{url_for('static', filename='js/desperdicio.js')}}"></script>
+{% endblock %}

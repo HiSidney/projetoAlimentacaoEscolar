@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/listAlunos.css')}}">
+{% endblock %}
+
+{% block title %}
+<title>Alunos do 3° que Não Vão Comer - 00/00</title>
+{% endblock %}
+
+{% block main %}
+<main>
+
+    <table>
+        <h2>3° ANO E.M - Não vão comer:</h2>
+        <tr>
+            <th>Nome</th>
+            <th>Série</th>
+        </tr>
+        <tr>
+            <td>João Ávila</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Maria Julia Martins</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Carlos Silva</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Ana maria Siqueira</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Lucas Henrique</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Fernanda Souza</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Gabriel Diamante</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Beatriz Jorenti</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Rafael Mota</td>
+            <td>A</td>
+        </tr>
+            <td>Paula Ferreira</td>
+            <td>A</td>
+
+         <tr>
+                <td>Camila Oliveira Mendes</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Pedro Henrique Barbosa</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Mariana Ferreira Souza</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Lucas Almeida Silva</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Bianca Santos Pereira</td>
+                <td>A</td>
+            </tr>
+    </table>
+</main>
+
+{% endblock %}
+
+{% block js %}
+<script src="{{url_for('static', filename='js/listAlunos.js')}}"></script>
+{% endblock %}

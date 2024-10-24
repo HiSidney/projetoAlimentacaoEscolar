@@ -1,0 +1,287 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    padding: 20px 20px 10px 20px;
+    border-bottom: 1px solid #FC000D;
+    box-shadow: 0px 4px 4px#00000032;
+    background: #fff;
+}
+
+.menuSuperior {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.menuSuperior img {
+    width: 200px;
+}
+
+.menuSuperior h1 {
+    border-left: 1px solid #FC000D;
+    padding-left: 20px;
+    margin-left: 30px;
+}
+
+.menuSuperior .divIcons {
+    align-items: center;
+}
+
+i {
+    font-size: 40px;
+    color: black;
+}
+
+.menuSuperior .divIcons #user {
+    margin-left: 40px;
+    font-size: 50px;
+}
+
+.menuSuperior .divIcons a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menuSuperior div {
+    display: flex;
+}
+
+.menuInferior nav ul {
+    display: flex;
+}
+
+.menuInferior div a {
+    display: flex;
+    padding: 10px 10px 0px 10px;
+    margin: 30px 30px 0px 30px;
+    font-size: 18px;
+    color: black;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+#confirmaRefeicao {
+    cursor: pointer;
+}
+
+.cubico {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #FC000D;
+}
+
+main {
+    min-height: 60vh;
+}
+
+footer {
+    background: #fff;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-top: #FC000D 1px solid;
+    box-shadow: 0px -4px 4px#00000032;
+    padding: 20px 8%;
+}
+
+#footer a {
+    font-size: 18px;
+    color: black;
+}
+
+#footer h2, img {
+    margin-bottom: 10px;
+}
+
+#footer a, p {
+    padding: 10px 10px 0px 10px;    
+}
+
+#idNos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#idNos img {
+    width: 200px;
+}
+
+#idNavegacao nav ul li a {
+    display: flex;
+    align-items: center;
+}
+
+#idRedesSociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+
+.quadrosDaConfirmacao {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px 0px;
+}
+
+.quadrosDaConfirmacao div {
+    display: flex;
+    flex-direction: column;
+}
+
+.quadrosDaConfirmacao div h2 {
+    padding-bottom: 10px;
+}
+
+.quadrosDaConfirmacao div li {
+    padding: 5px 0px;
+}
+
+.modal-btns {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.salvar {
+    padding: 10px 70px;
+    border: none;
+    background-color: #FC000D;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+.cancelar {
+    padding: 10px 70px;
+    border: none;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+
+
+.janela-modal-confirmacaoRefeicao {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000ca;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.janela-modal-confirmacaoRefeicao.abrir{
+    display: flex;
+}
+
+.modal-confirmacaoRefeicao {
+    width: 60%;
+    min-width: 450px;
+    min-height: 300px;
+    background-color: #ffffff96;
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+}
+
+@keyframes abrirModalConfirmacao {
+    from {
+        opacity: 0;
+        transform: translate3d(0px, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.abrir .confirmacaoRefeicao {
+    animation: abrirModalConfirmacao 0.5s;
+}
+
+
+
+.janela-modal-user {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0000000b;
+    display: none;
+    justify-content: right;
+    z-index: 999;
+}
+
+.janela-modal-user.abrir {
+    display: flex;
+}
+
+.modal-user {
+    margin-top: 90px;
+    width: 10%;
+    min-width: 100px;
+    min-height: 300px;
+    max-height: 300px;
+    background-color: #ffffff96;
+    border: 1px black solid;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.abrir .modal-user {
+    animation: abrirModalConfirmacao 0.5s;
+}
+
+.modal-user a {
+    font-size: 20px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.modal-user i {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#sairConta {
+    background-color: #FC000D;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #fff;
+}

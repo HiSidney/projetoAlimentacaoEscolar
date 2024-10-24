@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    background: url('/static/img/1358947.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} 
+
+.calendario{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagens{
+    width: 70%;
+}
+
+.grafico {
+    background-color: #fff;
+}
+
+.grafico h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+}

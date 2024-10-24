@@ -1,0 +1,393 @@
+{% extends 'baseNutricionista.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/atualizacaoCardapio.css')}}">
+{% endblock %}
+
+{% block title %}
+<title>Atualizar Cardápio | Projeto Alimentação Escolar SESI</title>
+{% endblock %}
+
+{% block main %}
+<main>
+    <div class="titulo">
+        <div class="ig">
+            <a href="#"><img class="imag" src="{{url_for('static', filename='img/cardapio/Bia.png')}}" id="cinza"></img></a>
+        </div>
+        <div class="sla">
+            <h1 class="text">Atualização do cardápio</h1>
+            <h3>Atualizar Imagem Cardápio</h3>
+            <input type="file" id="imgChooser" class="inputAtualizacaoImg">
+            <input type="date" name="date1" id="date1">
+            <input type="date" name="date2" id="date2">
+            <button class="salvar" id="confirmacaoAtualizacaoCalendario" onclick="confirmacaoAtualizacaoCalendario()">Confirmar</button>
+        </div>
+    </div>
+    
+    <div class="tudo">
+    
+        <div class="forms">
+
+            <h1>Bloqueio das Refeições por Eventos Escolares ou Atividades extracurriculares</h1>
+
+            <img src="{{ url_for('get_image', id=2) }}" alt="Imagem do Cardápio">
+            
+            <h3>Bloqueio para todas as salas</h3>
+            
+            <!-- <form action="#"> -->
+                <!-- <div class="geral"> -->
+
+                    <div class="campoSelecao">
+
+                        <label>Habilitar Refeições:</label>
+                        
+                        <div class="campo0">
+                            <div class="campo">
+                                <input type="checkbox" checked name="refeicao" id="manha">
+                                <label for="manha">Café da Manha</label>
+                            </div>
+                            <div class="campo">
+                                <input type="checkbox" checked name="refeicao" id="almoco">
+                                <label for="almoco">Almoço</label>
+                            </div>
+                            <div class="campo">
+                                <input type="checkbox" checked name="refeicao" id="tarde">
+                                <label for="tarde">Café da Tarde</label>
+                            </div>
+                        </div>
+
+                        <label>Dia:</label>
+                        <input type="date" name="data" id="dateT">
+                    </div>
+
+                    <div class="divButton">
+                        <button class="salvar" id="confirmacaoDasAtividadesEventos">Confirmar</button>
+                    </div>
+
+
+<!-- 
+                    <div class="campoSelecao">
+                        <h3>Bloqueio para todas as salas</h3>
+
+                        <label>Justificativa:</label>
+                        <select name="languages" id="lang">
+                            <optgroup label="Opções"></optgroup>
+                            <option value="Projeto Personaliza">Rotina diária</option>
+                            <option value="Senai">Férias</option>
+                            <option value="Projeto Personaliza">Reunião Pais</option>
+                            <option value="Projeto Personaliza">Feriado</option>
+                            <option value="Projeto Personaliza">Não haverá aula</option>
+                            <option value="Plantão">Bloqueado</option>
+                        </select>
+
+                        <label>Refeições a Bloquear:</label>
+                        <select name="languages" id="lang2" multiple>
+                            <optgroup label="Opções"></optgroup>
+                            <option value="Projeto Personaliza">Lanche da Manhã</option>
+                            <option value="Projeto Personaliza">Almoço</option>
+                            <option value="Projeto Personaliza">Lanche da Tarde</option>
+                        </select>
+
+                        <label>Dia a Bloquear:</label>
+                        <input type="date">
+                    </div> -->
+
+                    <!-- <div class="campoSelecao">
+                        <h3>Bloqueio para Ensino Fundamental I</h3>
+
+                        <label>Justificativa:</label>
+                        <select name="languages" id="lang">
+                            <optgroup label="Opções"></optgroup>
+                            <option value="Projeto Personaliza">Rotina diária</option>
+                            <option value="Senai">Conselho de Classe</option>
+                            <option value="Projeto Personaliza">Reunião Pais</option>
+                            <option value="Projeto Personaliza">Não haverá aula</option>
+                            <option value="Plantão">Bloqueado</option>
+                        </select>
+
+                        <label>Refeições a Bloquear:</label>
+                        <select name="languages" id="lang2" multiple>
+                            <optgroup label="Opções"></optgroup>
+                            <option value="Projeto Personaliza">Lanche da Manhã</option>
+                            <option value="Projeto Personaliza">Almoço</option>
+                            <option value="Projeto Personaliza">Lanche da Tarde</option>
+                        </select>
+
+                        <label>Dia a Bloquear:</label>
+                        <input type="date">
+                      
+                    </div>
+
+                    <div class="campoSelecao">
+                        <h3>Bloqueio para Ensino Fundamental II</h3>
+                
+                        <label>Justificativa:</label>
+                        <select name="languages" id="lang">
+                            <optgroup label="Opções"></optgroup>
+                            <option value="Projeto Personaliza">Rotina diária</option>
+                            <option value="Projeto Personaliza">Reunião Pais</option>
+                            <option value="Projeto Personaliza">Conselho de Classe</option>
+                            <option value="Projeto Personaliza">Interclasse</option>
+                            <option value="Projeto Personaliza">Não haverá aula</option>
+                            <option value="Plantão">Bloqueado</option>
+                        </select>
+
+                        <label>Refeições a Bloquear:</label>
+                        <select name="languages" id="lang2" multiple>
+                            <optgroup label="Opções"></optgroup>
+                            <option value="Projeto Personaliza">Lanche da Manhã</option>
+                            <option value="Projeto Personaliza">Almoço</option>
+                            <option value="Projeto Personaliza">Lanche da Tarde</option>
+                        </select>
+
+                        <label>Dia a Bloquear:</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="campoSelecao">
+                        <h3>Bloqueio para Ensino Médio</h3>
+                
+                        <label>Justificativa:</label>
+                        <select name="languages" id="lang">
+                            <optgroup label="Opções"></optgroup>
+                            <option value="Projeto Personaliza">Rotina diária</option>
+                            <option value="Projeto Personaliza">Reunião Pais</option>
+                            <option value="Projeto Personaliza">Conselho de Classe</option>
+                            <option value="Projeto Personaliza">Interclasse</option>
+                            <option value="Projeto Personaliza">Não haverá aula</option>
+                            <option value="Plantão">Bloqueado</option>
+                        </select>
+
+                        <label>Refeições a Bloquear:</label>
+                        <select name="languages" id="lang2" multiple>
+                            <optgroup label="Opções"></optgroup>
+                            <option value="Projeto Personaliza">Lanche da Manhã</option>
+                            <option value="Projeto Personaliza">Almoço</option>
+                            <option value="Projeto Personaliza">Lanche da Tarde</option>
+                        </select>
+
+                        <label>Dia a Bloquear:</label>
+                        <input type="date">
+                      
+                    </div>
+                </div>
+               
+                <h1>Por Salas:</h1>
+                <h2>Ensino Fundamental II</h2>
+                <div class="especificado">
+                    <div class="campoSelecao">
+                        <div class="texts">
+                            <label for="langa">6° A</label>
+                            <label for="langs">6° B</label>
+                            <label for="langs">6° C</label>
+                        </div>
+                
+                        <label>Justificativa:</label>
+                        <select name="languages" id="lang2">
+                            <optgroup label="Opções"></optgroup>
+                            <option value="Projeto Personaliza">Rotina diária</option>
+                            <option value="Projeto Personaliza">Projeto Personaliza</option>
+                            <option value="Clube Biblioteca">Bloqueado</option>
+                        </select>
+
+                        <label>Refeições a Bloquear:</label>
+                        <select name="languages" id="lang2" multiple>
+                        <optgroup label="Opções"></optgroup>
+                        <option value="Projeto Personaliza">Lanche da Manhã</option>
+                        <option value="Projeto Personaliza">Almoço</option>
+                        <option value="Projeto Personaliza">Lanche da Tarde</option>
+                        </select>
+
+                        <label>Dia a Bloquear:</label>
+                        <input type="date">
+                     
+                </div>
+
+                <div class="campoSelecao">
+                    <div class="texts">
+                        <label for="langa">7° A</label>
+                        <label for="langs">7° B</label>
+                        <label for="langs">7° C</label>
+                    </div>
+            
+                    <label>Justificativa:</label>
+                    <select name="languages" id="lang2">
+                    <optgroup label="Opções"></optgroup>
+                    <option value="Projeto Personaliza">Rotina diária</option>
+                    <option value="Projeto Personaliza">Projeto Personaliza</option>
+                    <option value="Clube Biblioteca">Bloqueado</option>
+                    </select>
+
+                    <label>Refeições a Bloquear:</label>
+                    <select name="languages" id="lang2" multiple>
+                    <optgroup label="Opções"></optgroup>
+                    <option value="Projeto Personaliza">Lanche da Manhã</option>
+                    <option value="Projeto Personaliza">Almoço</option>
+                    <option value="Projeto Personaliza">Lanche da Tarde</option>
+                    </select>
+
+                    <label>Dia a Bloquear:</label>
+                    <input type="date">
+                    
+                </div>
+
+                <div class="campoSelecao">
+                    <div class="texts">
+                        <label for="langa">8° A</label>
+                        <label for="langs">8° B</label>
+                        <label for="langs">8° C</label>
+                    </div>
+            
+                    <label>Justificativa:</label>
+                    <select name="languages" id="lang2">
+                    <optgroup label="Opções"></optgroup>
+                    <option value="Projeto Personaliza">Rotina diária</option>
+                    <option value="Projeto Personaliza">Projeto Personaliza</option>
+                    <option value="Clube Biblioteca">Bloqueado</option>
+                    </select>
+
+                    <label>Refeições a Bloquear:</label>
+                    <select name="languages" id="lang2" multiple>
+                    <optgroup label="Opções"></optgroup>
+                    <option value="Projeto Personaliza">Lanche da Manhã</option>
+                    <option value="Projeto Personaliza">Almoço</option>
+                    <option value="Projeto Personaliza">Lanche da Tarde</option>
+                    </select>
+
+                    <label>Dia a Bloquear:</label>
+                    <input type="date">
+                    
+                </div>
+
+                <div class="campoSelecao">
+                    <div class="texts">
+                        <label for="langa">9° A</label>
+                        <label for="langs">9° B</label>
+                        <label for="langs">9° C</label>
+                    </div>
+            
+                    <label>Justificativa:</label>
+                    <select name="languages" id="lang2">
+                        <optgroup label="Opções"></optgroup>
+                        <option value="Projeto Personaliza">Rotina diária</option>
+                        <option value="Projeto Personaliza">Projeto Personaliza</option>
+                        <option value="Clube Biblioteca">Bloqueado</option>
+                    </select>
+
+                    <label>Refeições a Bloquear:</label>
+                    <select name="languages" id="lang2" multiple>
+                        <optgroup label="Opções"></optgroup>
+                        <option value="Projeto Personaliza">Lanche da Manhã</option>
+                        <option value="Projeto Personaliza">Almoço</option>
+                        <option value="Projeto Personaliza">Lanche da Tarde</option>
+                    </select>
+
+                    <label>Dia a Bloquear:</label>
+                    <input type="date">
+                </div>
+            </div>
+               
+            <h2>Ensino Médio</h2>
+            <div class="opcao3"> 
+                <div class="campoSelecao">
+                    <div class="texts">
+                        <label for="langa">1° A</label>
+                        <label for="langs">1° B</label>
+                        <label for="langs">1° C</label>
+                    </div>
+                
+                    <label>Justificativa:</label>
+                    <select name="languages" id="lang2">
+                        <optgroup label="Opções"></optgroup>
+                        <option value="Projeto Personaliza">Rotina diária</option>
+                        <option value="Projeto Personaliza">Projeto Personaliza</option>
+                        <option value="Projeto Personaliza">Clube Biblioteca</option>
+                        <option value="Clube Biblioteca">Bloqueado</option>
+                    </select>
+
+                    <label>Refeições a Bloquear:</label>
+                    <select name="languages" id="lang2" multiple>
+                        <optgroup label="Opções"></optgroup>
+                        <option value="Projeto Personaliza">Lanche da Manhã</option>
+                        <option value="Projeto Personaliza">Almoço</option>
+                        <option value="Projeto Personaliza">Lanche da Tarde</option>
+                    </select>
+
+                    <label>Dia a Bloquear:</label>
+                    <input type="date">
+                  
+                </div>
+
+                <div class="campoSelecao">
+                    <div class="texts">
+                        <label for="langa">2° A</label>
+                    </div>
+               
+                    <label>Justificativa:</label>
+                    <select name="languages" id="lang2" multiple>
+                        <optgroup label="Opções"></optgroup>
+                        <option value="Projeto Personaliza">Rotina diária</option>
+                        <option value="Projeto Personaliza">Curso Técnico Senai Segunda e Quarta</option>
+                        <option value="Projeto Personaliza">Projeto Personaliza</option>
+                        <option value="Projeto Personaliza">Tópicos Avançados Sexta-feira</option>
+                        <option value="Clube Biblioteca">Bloqueado</option>
+                    </select>
+
+                    <label>Refeições a Bloquear:</label>
+                    <select name="languages" id="lang2" multiple>
+                        <optgroup label="Opções"></optgroup>
+                        <option value="Projeto Personaliza">Lanche da Manhã</option>
+                        <option value="Projeto Personaliza">Almoço</option>
+                        <option value="Projeto Personaliza">Lanche da Tarde</option>
+                    </select>
+
+                    <label>Dia a Bloquear:</label>
+                    <input type="date">
+                </div>
+              
+
+                <div class="campoSelecao">
+                    <div class="texts">
+                        <label for="langa">3° A</label>
+                    </div>
+               
+                    <label>Justificativa:</label>
+                    <select name="languages" id="lang2" multiple>
+                        <optgroup label="Opções"></optgroup>
+                        <option value="Projeto Personaliza">Rotina diária</option>
+                        <option value="Projeto Personaliza">Curso Técnico Senai Terça e Quinta</option>
+                        <option value="Projeto Personaliza">Projeto Personaliza Quarta-feira</option>
+                        <option value="Projeto Personaliza">Plantão Reforço Segunda e Sexta</option>
+                        <option value="Clube Biblioteca">Bloqueado</option>
+                    </select>
+
+                    <label>Refeições a Bloquear:</label>
+                    <select name="languages" id="lang2" multiple>
+                        <optgroup label="Opções"></optgroup>
+                        <option value="Projeto Personaliza">Lanche da Manhã</option>
+                        <option value="Projeto Personaliza">Almoço</option>
+                        <option value="Projeto Personaliza">Lanche da Tarde</option>
+                    </select>
+
+                    <label>Dia a Bloquear:</label>
+                    <input type="date">
+                </div>
+
+            
+            </div>    
+            </form>
+            <div class="divButton">
+                <button class="salvar" id="confirmacaoDasAtividadesEventos" onclick="confirmacaoDasAtividadesEventos()">Confirmar</button>
+            </div>
+
+        </div>
+    </div> -->
+</main>
+{% endblock %}
+
+{% block js %}
+<script src="{{url_for('static', filename='js/atualizacaoCardapio.js')}}"></script>
+{% endblock %}
+
+
+    

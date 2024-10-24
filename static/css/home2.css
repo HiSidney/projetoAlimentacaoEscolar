@@ -1,0 +1,139 @@
+main {
+    padding: 30px 60px;
+}
+
+main .infoTempo h1 {
+    float: right;
+    font-size: 30px;
+}
+
+main .infoTempo h2, .formAlimentacao h2 {
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+.tempoFinalResponder {
+    color: #FC000D;
+    font-size: 30px;
+}
+
+.divLegendaMarcacao {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.legendaMarcacao {
+    display: flex;
+    align-content: center;
+}
+
+.legendaMarcacao li a{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.legendaMarcacao #cubicoLegendaMarcado{
+    background-color: #70ff70;
+}
+
+.legendaMarcacao #cubicoLegendaDesmarcado{
+    background-color: #f9bb64;
+}
+
+.legendaMarcacao #cubicoLegendaBloqueado{
+    background-color: #d0d0d0;
+}
+
+.infoTempo {
+    margin-bottom: 60px;
+}
+
+.formAlimentacao h3 {
+    font-size: 20px;
+}
+
+.cardapio {
+    display: flex;
+    text-align: center;
+    margin: 20px;
+    justify-content: center;
+}
+
+.diaSemana {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.diaSemana h2 {
+    margin-bottom: 10px;
+}
+
+.diaSemana div {
+    padding: 0px 10px 10px 10px;
+}
+
+.diaSemana .cafeManha {
+    border-radius: 20px 20px 0px 0px;
+    cursor: pointer;
+}
+
+.cafeMarcado {
+    background-color: #00ff00;
+}
+
+.cafeDesmarcado {
+    background-color: #f29200;
+}
+
+.cafeBloqueado {
+    background-color: #d0d0d0;
+}
+
+.diaSemana .almoco {
+    cursor: pointer;
+}
+
+.almocoMarcado {
+    background-color: #70ff70;
+}
+
+.almocoDesmarcado {
+    background-color: #f9bb64;
+}
+
+.almocoBloqueado {
+    background-color: #e3e3e3;
+}
+
+.diaSemana .cafeTarde {
+    border-radius: 0px 0px 20px 20px;
+    cursor: pointer;
+}
+
+
+
+.diaSemana .data {
+    margin-top: 10px;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+}
+
+.formAlimentacao {
+    text-align: center;
+}
+
+.desperdicio{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.desperdicio h3{
+    color: rgb(27, 190, 27);
+    font-size: 40px;
+}

@@ -1,0 +1,163 @@
+*{
+    margin:0px;
+    padding:0px;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body{
+    background-image: url(/static/img/fundo.jpg);
+}
+
+
+.header{
+    background: #fa0101;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.h1Form{
+    font-size:30px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;  
+}
+
+.oii{
+    margin-top: 35px;
+}
+
+.oie{
+    margin-top: 15px;
+}
+.oie a{
+    color: #000000;
+}
+
+.area-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.Login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #cb3f3faa;
+    justify-content: center;
+}
+
+.Login form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.1rem;
+
+}
+.input-box i{
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+    right: 30px;
+    color: #000;
+}
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #000000;
+}
+
+#btn-login{
+    border-radius: 5%;
+}
+
+
+form [ type="submit"]{
+    display: block;
+    background-color: #ff0000;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffffff;
+    transition: .3s;
+}
+
+form [ type="submit"]:hover {
+    background-color: #ff5e5e;
+    box-shadow: 4px 4px 10px #ff5e5e;
+}
+
+p{
+    color: #ffffffc8;
+}
+
+a{
+    padding-left: 10px;
+    color: #5568FE;
+    text-decoration: none;
+}
+
+
+
+
+@media(max-width:700px)
+    {
+        .body{
+            flex-direction: column;
+        }
+    }
+
+#btn-login {
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    text-align: center;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: rgb(255, 0, 0);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#btn-login:hover{
+    background-color: #ff5e5e;
+    box-shadow: 0px 0px 10px #ff5e5e;
+}
+
+.select{
+    display: flex;
+    justify-content: space-around;
+}
+
+.select div{
+    display: flex;
+    justify-content: center;
+}
+
+.txt {
+    padding: 10px;
+    color: #ffffff;
+}
