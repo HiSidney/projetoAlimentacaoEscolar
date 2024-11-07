@@ -24,7 +24,7 @@
     <header>
         <div class="menuSuperior">
             <div class="divLogo">
-                <a href="/">
+                <a href="/relatorio">
                     <img src="{{url_for('static', filename='img/logo/Logo_SESI_vermelho.jpg')}}" alt="logo_SESI">
                 </a>
                 <h1>
@@ -45,8 +45,7 @@ da Indústria
                 <ul>
                     <li><div><a href="/relatorio"><div class="cubico"></div>Relatórios</div></a></li>
                     <li><div><a href="/atualizacaoCardapio"><div class="cubico"></div>Atualização de Cardápio</div></a></li>
-                    <li><div><a href="/calendario"><div class="cubico"></div>Calendário</div></a></li>
-                    <li><div><a href="/registrarDesperdicio"><div class="cubico"></div>Registro de Desperdício</div></a></li>
+                    <!-- <li><div><a href="/calendario"><div class="cubico"></div>Calendário</div></a></li> -->
                 </ul>
             </nav>
         </div>
@@ -59,17 +58,6 @@ da Indústria
                 <img src="{{url_for('static', filename='img/logo/Logo_SESI_vermelho.jpg')}}">
                 <a href="#">email@gmail.com</a>
                 <a href="#">(19)9999-9999</a>
-            </div>
-            <div id="idNavegacao">
-                <h2>Navegação:</h2>
-                <nav>
-                    <ul>
-                        <li><div><a href="/relatorio"><div class="cubico"></div>Relatórios</div></a></li>
-                        <li><div><a href="/atualizacaoCardapio"><div class="cubico"></div>Atualização de Cardápio</div></a></li>
-                        <li><div><a href="/calendario"><div class="cubico"></div>Calendário</div></a></li>
-                        <li><div><a href="/registrarDesperdicio"><div class="cubico"></div>Registro de Desperdício</div></a></li>
-                    </ul>
-                </nav>
             </div>
             <div id="idRedesSociais">
                 <h2>Sigá-nos</h2>
@@ -85,8 +73,9 @@ da Indústria
             <nav>
                 <ul>
                     <li><i id="user" class="fa-regular fa-user"></i></li>
+                    <li id="modal-user-name">Nome</li>
                     <li><a href="/account">Minha Conta</a></li>
-                    <li><a href="/login" id="sairConta">Sair da Conta</a></li>
+                    <li><a href="/encerrar_sessao" id="sairConta">Sair da Conta</a></li>
                 </ul>
             </nav>
         </div>

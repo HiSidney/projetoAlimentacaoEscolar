@@ -5,6 +5,11 @@
     text-decoration: none;
 }
 
+body {
+    min-height: 80vh;
+    background-color: #f4f4f4;
+}
+
 header {
     padding: 20px 20px 10px 20px;
     border-bottom: 1px solid #FC000D;
@@ -18,8 +23,8 @@ header {
     text-align: center;
 }
 
-.menuSuperior img {
-    width: 200px;
+.menuSuperior img, #idNos img {
+    width: 180px;
 }
 
 .menuSuperior h1 {
@@ -33,13 +38,22 @@ header {
 }
 
 i {
-    font-size: 40px;
+    font-size: 30px;
+    gap: 10px;
     color: black;
 }
 
 .menuSuperior .divIcons #user {
     margin-left: 40px;
-    font-size: 50px;
+    font-size: 40px;
+}
+
+.modal-user #user {
+    font-size: 60px;
+}
+
+.modal-user li {
+    text-align: center;
 }
 
 .menuSuperior .divIcons a {
@@ -57,7 +71,6 @@ i {
 
 .menuInferior div a {
     display: flex;
-    padding: 10px 10px 0px 10px;
     margin: 30px 30px 0px 30px;
     font-size: 18px;
     color: black;
@@ -109,10 +122,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-#idNos img {
-    width: 200px;
 }
 
 #idNavegacao nav ul li a {

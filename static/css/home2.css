@@ -2,14 +2,35 @@ main {
     padding: 30px 60px;
 }
 
-main .infoTempo h1 {
-    float: right;
-    font-size: 30px;
+.menuCardapio {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
 }
 
-main .infoTempo h2, .formAlimentacao h2 {
-    text-transform: uppercase;
-    margin-left: 20px;
+.menuCardapio h1 {
+    text-decoration: underline;
+}
+
+.menuCardapio2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.imagem-cardapio {
+    width: 700px;
+}
+
+.notificacaoMariane {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
 }
 
 .tempoFinalResponder {
@@ -68,16 +89,29 @@ main .infoTempo h2, .formAlimentacao h2 {
 }
 
 .diaSemana h2 {
-    margin-bottom: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
 }
 
 .diaSemana div {
     padding: 0px 10px 10px 10px;
 }
 
+.diaSemana div p {
+    color: transparent;
+    user-select: none; /* Para navegadores modernos */
+    -webkit-user-select: none; /* Para navegadores WebKit, como Safari */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para IE/Edge */
+    font-size: 10px;
+}
+
 .diaSemana .cafeManha {
     border-radius: 20px 20px 0px 0px;
     cursor: pointer;
+    height: 60px;
 }
 
 .cafeMarcado {
@@ -94,6 +128,7 @@ main .infoTempo h2, .formAlimentacao h2 {
 
 .diaSemana .almoco {
     cursor: pointer;
+    height: 80px;
 }
 
 .almocoMarcado {
@@ -111,6 +146,7 @@ main .infoTempo h2, .formAlimentacao h2 {
 .diaSemana .cafeTarde {
     border-radius: 0px 0px 20px 20px;
     cursor: pointer;
+    height: 60px;
 }
 
 

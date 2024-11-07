@@ -86,3 +86,16 @@ document.getElementById('confirmacaoDasAtividadesEventos').addEventListener('cli
 
 })
     
+
+document.getElementById('btn-enviar-notificacao').addEventListener('click', () => {
+    const notificaco = document.getElementById('informacoes').value;
+
+    axios.post('/salvar-notificacao', Notificacao = {'text':notificaco})
+    .then(function(response){
+        console.log(response.data);
+        alert('sucess');
+    })
+    .catch(function(error){
+        console.error(error);
+    })
+})

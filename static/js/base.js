@@ -1,3 +1,23 @@
+axios.get('/identificar_user')
+.then(function(response){
+    console.log(response.data['nome']);
+    document.getElementById('modal-user-name').innerHTML = response.data['nome'];
+})
+.catch(function(error){
+    console.error(error);
+})
+
+document.getElementById('sairConta').addEventListener('click', ()=> {
+    axios.get('/encerrar_sessao')
+    .then(function(response){
+        console.log(response.data);
+    })
+    .catch(function(error){
+        console.error(error);
+    })
+})
+
+
 function abrirConfirmacaoRefeicao(){
     const confirmacaoRefeicao = document.getElementById('janela-modal-confirmacaoRefeicao');
     confirmacaoRefeicao.classList.add('abrir');

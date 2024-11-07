@@ -44,7 +44,7 @@ body{
     height: 130px;
     display: flex;
     align-items: center;
-    padding-left: 50px;
+    padding-left: 10px;
 }
 
 .oi{
@@ -55,14 +55,23 @@ body{
 .sla{
     font-size:25px;
     color: #ffffff;
-    margin-left: 70px;
-    margin-top: -55px;
-    
+    align-self: center;
+   
+
     
 }
 
+
+.be{
+height: 20px;
+width: 190px;
+margin-left: 260px;
+}
+
+
 .conta{
     margin-top: 20px;
+    margin-left: 252px;
 }
 .conta a{
     color: #000000;
@@ -70,21 +79,42 @@ body{
 
 .area-login{
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #cb3f3faa;
+    padding: 10px;
+    width: 50%;
+    margin-top: 50px;
+    border: 1px solid #cb3f3f;
+    border-radius: 20px;
+}
+.centro{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-left: 590px;
-    margin-top: 80px;
+    width: 100%;
+}
+
+.area-login2{
+    display: flex;
+    flex-direction: row;
 }
 
 .Login{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #cb3f3faa;
-    width: 385px;
-    height: 450px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-top: 30px;
    
 }
+
+.Login div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
 
 .Login form{
     width: 80%;
@@ -140,12 +170,11 @@ a{
     }
 }
 
-#btn-cadastro {
+#bnt-cadastro {
     text-decoration: none;
     color: white;
-    align-items: center;
-    text-align: center;
-    padding: 5px 10px;
+    align-self: center;
+    padding: 10px 30px;
     margin-top: 10px;
     border-radius: 20px;
     background-color: rgb(255, 0, 0);

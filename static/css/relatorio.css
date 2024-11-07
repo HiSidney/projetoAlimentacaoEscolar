@@ -1,89 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
 
-* {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
-}
-
-header {
-    padding: 20px 20px 10px 20px;
-    border-bottom: 1px solid #FC000D;
-    box-shadow: 0px 4px 4px#00000032;
-}
-
-.menuSuperior {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.menuSuperior img {
-    width: 200px;
-}
-
-.menuSuperior h1 {
-    border-left: 1px solid #FC000D;
-    padding-left: 20px;
-    margin-left: 30px;
-}
-
-.menuSuperior .divIcons {
-    align-items: center;
-}
-
-i {
-    font-size: 40px;
-    color: black;
-}
-
-.blackI{
-    color: #fff;
-}
-
-.menuSuperior .divIcons #user {
-    margin-left: 40px;
-    font-size: 50px;
-}
-
-.menuSuperior .divIcons a {
-    padding: 10px;
-    text-decoration: none;
-}
-
-.menuSuperior div {
-    display: flex;
-}
-
-.menuInferior nav ul {
-    display: flex;
-}
-
-.menuInferior div a {
-    display: flex;
-    padding: 10px 10px 0px 10px;
-    margin: 30px 30px 0px 30px;
-    font-size: 18px;
-    color: black;
-    object-fit: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-}
-
-h1, h2, h3, p, th {
-    font-family: 'Roboto';
-}
-
-#confirmaRefeicao {
-    cursor: pointer;
-}
-
-.cubico {
-    padding: 10px;
-    margin-right: 10px;
-    background-color: #FC000D;
-}
-
 main {
     margin : 30px;
 }
@@ -135,12 +51,15 @@ tr:hover{
 
 .respiroTr.manha td {
     background-color: #ff838a;
+    color: #fff;
 }
 
 .respiroTr.almoco td {
     background-color: #83daff;
+    color: #fff;
 }
 
 .respiroTr.tarde td {
     background-color: #83ff8f;
+    color: #fff;
 }

@@ -26,18 +26,6 @@ body {
     flex-direction: column ;
 }
 
-.menu ul{
-    display: flex;
-    justify-content: left;
-    list-style-type: none ;
-}
-.menu1 ul{
-
-    list-style-type: none ;
-    display: flex;
-    flex-direction: column;
-
-}
 .titulo{
     display: flex;
     padding-bottom: 20px;
@@ -203,7 +191,30 @@ main{
 .campoSelecao select optgroup {
     background-color: #ff7f85;
 }
+.campo {
+    font-size: 25px;
+    font-weight: 200px;
+}
 
+.escrita{
+    align-items: center;
+    
+}
+
+.englobar{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.botao{
+    margin-left: 50px;
+}
+
+.datas {
+    align-items: center;
+    margin-left: 100px;
+}
 
 .geral{
     display: flex;
@@ -250,4 +261,3 @@ main{
 #confirmacaoDasAtividadesEventos{
     margin: 30px 0px;
 }
-

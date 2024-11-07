@@ -50,6 +50,8 @@ body{
     padding: 40px;
     background-color: #cb3f3faa;
     justify-content: center;
+    border-radius: 20px;
+    border: 1px solid #cb3f3f;
 }
 
 .Login form{

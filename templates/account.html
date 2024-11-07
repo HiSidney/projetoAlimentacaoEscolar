@@ -10,50 +10,40 @@
 
 {% block main %}
 <main class="main">
-    <div class="grafico">
-        <img class="imagens" src="{{url_for('static', filename='img/perfil.png')}}">
-        <div class="icons">
-            <button class="button" onclick="adicionaTemaClaro()">
-                <i class="fa-solid fa-sun"></i>
-            </button>
-            <button class="button" onclick="adicionaTemaEscuro()">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-        </div>
-        
-        <div class="tudo">
-            <div class="lll">
-                <p class="dados">Dados do Usuário</p>
-            </div>
-        </div>
+    
         <div class="seila0">
             <div class="seila">
                 <div class="campos">
-                    <p>Nome:</p>
-                    <input type="text" name="Nome" placeholder="Ester Silva" disabled autofocus>
+                    
+                    <p>Nome Completo:</p>
+                    <input id="input-name" type="text"disabled autofocus>
                 </div>
                 <div class="campos">
-                    <p>Login:</p>
-                    <input type="text" name="Nome" placeholder="CPF" disabled  autofocus>
+                    <p>Id do Usuário</p>
+                    <input id="input-id" type="text"placeholder="CPF" disabled  autofocus>
                 </div>
                 <div class="campos">
-                    <p>Série:</p>
-                    <input type="text" name="Nome" placeholder="Serie" disabled  autofocus>
+                    <p>Código</p>
+                    <input id="input-codigo" type="text"placeholder="1435" disabled autofocus>
                 </div>
+                <div class="campos">
+                    <p>Celular</p>
+                    <input id="input-telefone" type="tel"placeholder="(19)995847495" disabled autofocus>
+                </div>
+                
             </div>
 
             <div class="seila">
+
+                <div class="campos">
+                    <p>CPF</p>
+                    <input id="input-cpf" type="text"placeholder="Serie" disabled  autofocus>
+                </div>
+
                 <div class="campos">
                     <p>E-mail sesi</p>
-                    <input type="email" name="Nome" placeholder="ester.21@portalsesisp" disabled  autofocus>
+                    <input id="input-email" type="email"placeholder="ester.21@portalsesisp" disabled  autofocus>
                 </div>
-                <div class="campos">
-                    <p>RM</p>
-                    <input type="text" name="Nome" placeholder="1435" disabled autofocus>
-                </div>
-                <button class="editar"> <p class="fonteditar">Editar</p></button>
-
-                
             </div>
             
             
@@ -61,15 +51,15 @@
                 <div class="campos">
                     <p class="altersen">Alterar senha</p>
                     <p>Senha atual</p>
-                    <input type="password" name="Nome" placeholder="" autofocus>
+                    <input id="input-senha" type="password"placeholder="" autofocus>
                 </div>
                 <div class="campos">
                     <p>Nova senha</p>
-                    <input type="password" name="Nome" placeholder="" autofocus>
+                    <input id="input-senha2" type="password"placeholder="" autofocus>
                     
                 </div>
                 <div class="campos1">
-                    <input class="oii" type="submit" name="Nome"  value="teste" autofocus >
+                    <input id="input-telefone" class="oii" type="submit" value="Alterar" autofocus>
                 </div>
         </div>
 
